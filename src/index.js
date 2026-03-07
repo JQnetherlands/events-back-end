@@ -9,8 +9,10 @@ import loginRouter from "./routes/login.js";
 import logMiddleware from "./middleware/logMiddleware.js";
 import errorHandler from "./middleware/errorHandler.js";
 import authMiddleware from "./middleware/auth.js";
+import cors from "cors"
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use(logMiddleware);
 
