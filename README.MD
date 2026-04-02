@@ -109,7 +109,7 @@ Key architectural goals:
 ---
 
 # 📁 Project Structure
-
+```
 src/
 ├── data/
 │   ├── categories.json
@@ -157,6 +157,7 @@ src/
 │   └── log.js
 │
 └── index.js
+```
 
 ---
 
