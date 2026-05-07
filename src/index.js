@@ -24,7 +24,22 @@ app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!");
 });
 app.get("/", (req, res) => {
-  res.send("Hello world! It is working again");
+  res.json({
+    name: "Events API",
+    status: "running",
+    version: "1.0.0",
+    description:
+      "Backend API for managing events, categories, users, and authentication.",
+    documentation: "https://github.com/JQnetherlands/events-back-end",
+    baseUrl: "https://your-render-url.onrender.com",
+    endpoints: {
+      auth: "/login",
+      users: "/users",
+      events: "/events",
+      categories: "/categories",
+    },
+    healthCheck: "/",
+  });
 });
 app.get("/test-env", authMiddleware, (req, res) => {
   res.json({
