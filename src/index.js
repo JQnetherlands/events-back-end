@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
     description:
       "Backend API for managing events, categories, users, and authentication.",
     documentation: "https://github.com/JQnetherlands/events-back-end",
-    baseUrl: "https://your-render-url.onrender.com",
+    baseUrl: "https://events-back-end-h55h.onrender.com",
     endpoints: {
       auth: "/login",
       users: "/users",
